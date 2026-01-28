@@ -129,6 +129,6 @@ plt.ylabel("Number of Employees")
 plt.title("Number of Employees belonging to that Age")
 plt.savefig("graphs/age_count.png", dpi=310, bbox_inches="tight")
 
-print("Graphs of Salary v/s Name and Graph by age is saved in Graphs folder:")
+print("Graphs of Salary v/s Name and Graph by Age is saved in Graphs folder:")
 
 print("*"*111)
