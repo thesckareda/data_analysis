@@ -14,16 +14,6 @@ DF['Hire Date'] = pd.to_datetime(DF['Hire Date'])
 ### Column-wise modifying
 DF['Age'] = DF['Age'].fillna(DF['Age'].mean())
 
-#average of age
-def avg_age():
-    avg_age = DF['Age'].mean()
-    print(f"Average age is: {avg_age}")
-
-
-## average of salary
-def avg_salary():
-    avg_sal = DF['Salary'].mean()
-    print(f"Average Salary is {avg_sal} ruppees.")
 
 ### column names
 def column_names():
@@ -38,37 +28,6 @@ def col_row():
     print(f"Rows: {rows}")
     print(f"Columns: {col}")
 
-
-### Sorted order of Salary
-def sort_sal():
-    salary_des = DF.sort_values(by='Salary', ascending=False)
-    print(salary_des[['Name', 'Salary']].reset_index(drop=True))
-
-### Graph of Salary
-def graph_salary_name():
-    X = DF['Salary']
-    Y = DF['Name']
-    ax = plt.subplots()
-    ax.plot()
-    DF.plot(kind='bar', x='Salary', y='Name')
-    plt.show()
-
-### Sort by Performance Score
-def sort_performance():
-    performance_order = DF.sort_values(by='Performance Score', ascending=False)
-    print(performance_order[['Name', 'Performance Score']].reset_index(drop=True))
-
-
-
-### Sort by Hire Date
-def sort_hire_date():
-    hire_date = DF.sort_values(by='Hire Date')
-    print(hire_date[['Name', 'Hire Date']].reset_index(drop=True))
-
-
-
-def data():
-    print(DF)
 
 # welocome
 print("-------------  Welcome to the Data Analyzer with a demo data:  ---------\n")
